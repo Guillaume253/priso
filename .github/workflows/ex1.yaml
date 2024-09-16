@@ -1,0 +1,19 @@
+name: npm test
+on: 
+  workflow_dispatch:
+               
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps: 
+      - name:  Checkout repository   $GITHUB_WORKSPACE
+        uses:  actions/checkout@v3
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "14"
+      - name: Install bats
+        run: npm install -g bats
+      - name: Run bats
+        run: bats -v 
+        
