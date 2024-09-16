@@ -24,10 +24,10 @@ jobs:
      - name: Install Node.js
        uses: actions/setup-node@v4
        with:
-         node-version:"18"
+         node-version: "18"
      - name: test bats
-       run: npm test - bats
-     - name: Run bats
-       run: bats -v
+       run: npm test 
     needs: job1
+   
+  
         
