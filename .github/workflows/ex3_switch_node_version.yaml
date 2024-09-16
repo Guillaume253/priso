@@ -5,15 +5,16 @@ on:
 jobs:
   run-npm-test:
     runs-on: ubuntu-latest
+    env:
+      NODE_VERSION: 14
     steps:
         - name: checkout
           uses: actions/checkout@v3
         - name : setup node
           uses: actions/setup-node@v3
           with:
-            node-version: '14'
-        - name: run test
-          shell: bash
-          run: |
-            npm install
-            npm test
+            node-version: ${{ env.NODE_VERSION}}
+        - name:   priso 1
+          run: node -v
+            
+      
