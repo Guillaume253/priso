@@ -24,7 +24,7 @@ jobs:
      - name: Install Node.js
        uses: actions/setup-node@v4
        with:
-         node-version: "14"
+         node-version: lts/*
      - name: test bats
        run: npm test 
     needs: job1
